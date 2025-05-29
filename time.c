@@ -24,7 +24,7 @@ int main() {
     char choice;
 
     do {
-        system(CLEAR);  // Clear screen
+        system(CLEAR);  // [Clear screen]
 
         srand(time(0));
         int index = rand() % 5;
@@ -42,7 +42,7 @@ int main() {
         double timeTaken = difftime(end, start);
         printf("\n⏱️  Time Taken: %.2f seconds\n", timeTaken);
 
-        // Word count
+        // [Word count]
         int wordCount = 1;
         for (int i = 0; userInput[i] != '\0'; i++) {
             if (userInput[i] == ' ' && userInput[i + 1] != ' ' && userInput[i + 1] != '\n') {
@@ -52,7 +52,7 @@ int main() {
 
         double wpm = (wordCount * 60.0) / timeTaken;
 
-        // Accuracy calculation
+        // [Accuracy calculation]
         int correctChars = 0;
         int totalChars = strlen(selected);
         for (int i = 0; selected[i] != '\0' && userInput[i] != '\0'; i++) {
